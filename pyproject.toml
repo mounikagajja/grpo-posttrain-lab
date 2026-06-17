@@ -1,0 +1,22 @@
+@"
+[project]
+name = "grpo-posttrain-lab"
+version = "0.1.0"
+description = "SFT, DPO, GRPO, and tool-use RL post-training pipeline on GSM8K with rule-based verifier reward"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "trl",
+    "peft",
+    "accelerate",
+    "datasets",
+    "vllm",
+]
+
+[tool.ruff]
+line-length = 110
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+"@ | Set-Content -Path pyproject.toml -Encoding utf8
